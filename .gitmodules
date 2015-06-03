@@ -5,5 +5,5 @@
 	path = zsh/antigen
 	url = https://github.com/zsh-users/antigen.git
 [submodule "vim/Vundle.vim"]
-	path = vim/Vundle.vim
+	path = vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
