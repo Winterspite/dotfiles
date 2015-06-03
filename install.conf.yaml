@@ -1,4 +1,4 @@
-- clean: ["~"]
+- clean: ['~']
 
 - link: 
   ~/.gitconfig: gitconfig
@@ -10,4 +10,7 @@
   ~/.zsh_aliases: zsh_aliases
 
 - shell: 
-  git submodule update --init --recursive
+  - [git submodule update --init --recursive]
+
+
+

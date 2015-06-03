@@ -1,0 +1,25 @@
+[user]
+	email = barrettj@gmail.com
+	name = Joe Barrett
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  interactive = auto
+  ui = true
+  pager = true
+[push]
+	default = simple
+[alias]
+	co = checkout
+  st = status
+  ci = commit
+  df = diff
+  tree = log --graph --pretty=oneline --decorate
+  pom = push origin master
+[core]
+	editor = gvim -f
+  pager = less -FXRS
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[apply]
+  whitespace=fix
