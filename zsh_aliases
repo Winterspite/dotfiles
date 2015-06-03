@@ -1,0 +1,46 @@
+# ZSH Aliases
+
+
+## Backup Related Stuff ##
+alias mountbackup="sudo cryptsetup luksOpen /dev/sdc1 backup && sudo mount /dev/mapper/backup /Backup"
+alias umountbackup="sudo umount /Backup ; sudo cryptsetup luksClose backup"
+
+alias zshconfig="gvim ~/.zshrc"
+alias df="df -H"
+alias update="sudo apt-get update && sudo apt-get upgrade"
+alias install="sudo apt-get install"
+alias myip="wget http://nwdesign.us/myip.php -O - -q ; echo"
+alias glog="git log --graph --oneline --decorate --date-order --color --boundary"
+
+
+## Pops up a firefox session with the HTMLized version of our TODO list
+alias todo="~/Code/scripts/preview.rb ~/TODO.md"
+alias newpost="cd ~/gitrepos/octopress && bundle exec rake new_post"
+alias termterm="~/gitrepos/scripts/termterm.rb"
+
+## Touchpad Commands ##
+TOUCHPAD="SynPS/2 Synaptics TouchPad"
+## Disable the touchpad
+alias touchoff="xinput --set-prop \"$TOUCHPAD\" \"Device Enabled\" 0"
+## Enable the touchpad
+alias touchon="xinput --set-prop \"$TOUCHPAD\" \"Device Enabled\" 1"
+
+
+## KSP Stuff
+alias ksp="cd ~/.steam/root/SteamApps/common/Kerbal\ Space\ Program ; ./KSP.x86_64"
+
+
+alias msfconsole="cd ~/gitrepos/metasploit-framework ; ./msfconsole"
+
+
+man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+            man "$@"
+}
