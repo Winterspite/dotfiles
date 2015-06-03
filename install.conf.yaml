@@ -1,13 +1,13 @@
 - clean: ['~']
 
 - link: 
-  ~/.gitconfig: gitconfig
-  ~/.tmux.conf: tmux.conf
-  ~/.vim: vim/
-  ~/.vimrc: vimrc
-  ~/.zsh: zsh/
-  ~/.zshrc: zshrc
-  ~/.zsh_aliases: zsh_aliases
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/.zsh_aliases: zsh_aliases
 
 - shell: 
   - [git submodule update --init --recursive]
